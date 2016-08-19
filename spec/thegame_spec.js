@@ -1,24 +1,24 @@
 describe("Play Game", function() {
-  var number;
+  var viktoria;
 
   beforeEach(function() {
-
-    number = new Player();
+    viktoria = new Player();
   });
 
   it("should be divisible by 15", function() {
-    number.fizzbuzz();
-    expect(number.fizzbuzz).toEqual('FizzBuzz!');
+    expect(viktoria.theRules(15)).toEqual("Fizz Buzz!");
   });
 
   it("should be divisible by 5", function() {
-    number.buzz();
-    expect(number.buzz).toEqual('Buzz!');
+    expect(viktoria.theRules(5)).toEqual("Buzz!");
   });
 
   it("should be divisible by 3", function() {
-    number.fizz();
-    expect(number.fizz).toEqual('Fizz!');
+    expect(viktoria.theRules(3)).toEqual("Fizz!");
+  });
+
+  it("should return only the number", function() {
+    expect(viktoria.theRules(1)).toEqual(1);
   });
 
 });
